@@ -43,16 +43,12 @@ header a {
   color: rgb(173, 216, 230);
   font-size: 16px;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
-header a:hover::after {
-  content: ' - Hovered';
+header a:hover {
+  font-size: 18px;
   color: rgb(65, 105, 225);
-  position: absolute;
-  top: 0;
-  right: -20px;
-  font-size: 12px;
-  transition: all 0.3s ease-in-out;
 }
 
 /* First Page Fix (full width and no extra margin) */
@@ -65,7 +61,6 @@ header a:hover::after {
   height: 100vh;
   width: 100vw;
 }
-
 
 /* Sidebar Content */
 .sidebarleft {
@@ -88,7 +83,7 @@ header a:hover::after {
   border: 2px dotted rgb(65, 105, 225);
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.2);
-  color:rgb(65, 105, 225);
+  color: rgb(65, 105, 225);
 }
 
 .sidebarleft h3 {
@@ -112,7 +107,6 @@ header a:hover::after {
   color: white;
 }
 
-
 .leftpart {
   width: 50%;
   display: flex;
@@ -130,11 +124,12 @@ header a:hover::after {
   text-align: right;
   padding: 20px;
 }
-portfolio-item p {
+
+#portfolio-item p {
   font-size: 16px;
   line-height: 1.6;
   color: white;
-  transition: transform 0.3s ease, font-size 0.3s ease;
+  transition: transform 2s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 .portfolio-item p:hover {
@@ -295,10 +290,9 @@ footer a {
 }
 
 footer a:hover {
-  font-size: 18px; /* Make the link larger on hover */
-  color: rgb(173, 216, 230); /* Change the color on hover */
+  font-size: 18px;
+  color: rgb(173, 216, 230);
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
