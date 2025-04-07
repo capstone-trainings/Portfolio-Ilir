@@ -136,15 +136,22 @@ header a {
 
 @keyframes objectMove {
     0% {
-        transform: translateY(0);
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(-5px, -15px) rotate(-5deg);
     }
     50% {
-        transform: translateY(-20px);
+        transform: translate(0, -25px) rotate(0deg);
+    }
+    75% {
+        transform: translate(5px, -15px) rotate(5deg);
     }
     100% {
-        transform: translateY(0);
+        transform: translate(0, 0) rotate(0deg);
     }
 }
+
 
 /* Third Page */
 .thirdpage {
@@ -152,18 +159,89 @@ header a {
     background-color: rgb(173, 216, 230);
     padding: 20px;
     color: rgb(54, 69, 79);
-    margin-top: 50px;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 
+
 .thirdpage ul {
     padding: 0;
     list-style: none;
 }
-
+body {
+    margin: 0;
+    background: #111;
+    overflow: hidden;
+  }
+  
+  .spm-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .spm {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    animation: swim 6s ease-in-out infinite alternate;
+  }
+  
+  .head {
+    width: 30px;
+    height: 30px;
+    background:rgb(54, 69, 79);
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .tail {
+    width: 100px;
+    height: 6px;
+    background: linear-gradient(to left, rgb(65, 105, 225), transparent);
+    animation: wiggle 0.3s ease-in-out infinite;
+    transform-origin: right center;
+    z-index: 1;
+  }
+  
+  /* Horizontal movement with left-to-right and back motion */
+  @keyframes swim {
+    0% {
+      left: -150px;
+      transform: scaleX(1); /* Facing right */
+    }
+    50% {
+      left: calc(100% - 150px); /* Moves to the right */
+      transform: scaleX(1); /* Keep facing right */
+    }
+    50.1% {
+      transform: scaleX(-1); /* Flip to face left */
+    }
+    100% {
+      left: -150px;
+      transform: scaleX(-1); /* Keep facing left */
+    }
+  }
+  
+  /* Tail wiggle effect */
+  @keyframes wiggle {
+    0% {
+      transform: rotate(5deg);
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(5deg);
+    }
+  }
+  
+  
+  
 /* Footer */
 footer {
     background-color: rgb(65, 105, 225);
