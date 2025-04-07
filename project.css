@@ -64,8 +64,31 @@ header a {
     padding: 20px;
     color: rgb(54, 69, 79);
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction:column;
+    
+
+    
+}
+.sidebarleft p {
+    font-size: 18px;  /* Increase the font size for better readability */
+    line-height: 1.6;  /* Improve readability by adding more space between lines */
+    margin-bottom: 40px; /* Add some spacing below the paragraph */
+    border: 2px dotted rgb(65, 105, 225);; /* Decorative dotted border */
+    padding: 10px;  /* Add some padding inside the paragraph */
+    background-color: rgba(255, 255, 255, 0.2); /* Light background for better contrast */
 }
 
+.sidebarleft h3 {
+    font-size: 36px;  /* Larger font size for the heading */
+    font-weight: bold;  /* Make the heading bold */
+    color: rgb(54, 69, 79);  /* Ensure the heading is dark enough for readability */
+    margin-bottom: 20px;  /* Add spacing between the heading and the paragraph */
+    text-transform: uppercase;  /* Make the heading uppercase for emphasis */
+    letter-spacing: 2px;  /* Add some letter spacing to the heading */
+}
 /* Second Page Fixes */
 .secondpage {
     display: flex;
