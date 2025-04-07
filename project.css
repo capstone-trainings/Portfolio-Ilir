@@ -1,259 +1,363 @@
-/* Fix layout overflow globally */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
 }
 
 /* Body Layout */
 body {
-    background-color: rgb(54, 69, 79);
-    display: flex;
-    flex-direction: column;
+  background-color: rgb(54, 69, 79);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: rgb(54, 69, 79);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: rgb(54, 69, 79);
 }
 
 header ul {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  gap: 10px;
 }
 
 header ul li {
-    padding: 10px;
+  padding: 10px;
 }
 
 header a {
-    text-decoration: none;
-    color: rgb(173, 216, 230);
-    font-size: 16px;
+  text-decoration: none;
+  color: rgb(173, 216, 230);
+  font-size: 16px;
+  position: relative;
+}
+
+header a:hover::after {
+  content: ' - Hovered';
+  color: rgb(65, 105, 225);
+  position: absolute;
+  top: 0;
+  right: -20px;
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
 }
 
 /* First Page Fix (full width and no extra margin) */
 .firstpage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background-color: rgb(173, 216, 230);
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgb(173, 216, 230);
+  height: 100vh;
+  width: 100vw;
 }
+
 
 /* Sidebar Content */
 .sidebarleft {
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(173, 216, 230);
-    padding: 20px;
-    color: rgb(54, 69, 79);
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction:column;
-    
-
-    
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(173, 216, 230);
+  padding: 20px;
+  color: rgb(54, 69, 79);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
+
 .sidebarleft p {
-    font-size: 18px;  /* Increase the font size for better readability */
-    line-height: 1.6;  /* Improve readability by adding more space between lines */
-    margin-bottom: 40px; /* Add some spacing below the paragraph */
-    border: 2px dotted rgb(65, 105, 225);; /* Decorative dotted border */
-    padding: 10px;  /* Add some padding inside the paragraph */
-    background-color: rgba(255, 255, 255, 0.2); /* Light background for better contrast */
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  border: 2px dotted rgb(65, 105, 225);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color:rgb(65, 105, 225);
 }
 
 .sidebarleft h3 {
-    font-size: 36px;  /* Larger font size for the heading */
-    font-weight: bold;  /* Make the heading bold */
-    color: rgb(54, 69, 79);  /* Ensure the heading is dark enough for readability */
-    margin-bottom: 20px;  /* Add spacing between the heading and the paragraph */
-    text-transform: uppercase;  /* Make the heading uppercase for emphasis */
-    letter-spacing: 2px;  /* Add some letter spacing to the heading */
-}
-/* Second Page Fixes */
-.secondpage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    padding: 20px;
-    background-color: rgb(65, 105, 225);
-    color: white;
+  font-size: 36px;
+  font-weight: bold;
+  color: rgb(54, 69, 79);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+/* Second Page Fixes */
+.secondpage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgb(65, 105, 225);
+  color: white;
+}
+
+
 .leftpart {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 .rightpart {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    text-align: right;
-    padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: right;
+  padding: 20px;
+}
+portfolio-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.portfolio-item p:hover {
+  font-size: 18px;
+  transform: scale(1.1);
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: rgb(65, 105, 225);
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.portfolio-item a:hover {
+  color: rgb(173, 216, 230);
 }
 
 .right-object {
-    position: relative;
-    width: 80px;
-    height: 80px;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
 .object {
-    width: 60px;
-    height: 60px;
-    background-color: rgb(173, 216, 230);
-    border-radius: 50%;
-    animation: objectMove 2s ease-in-out infinite;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 60px;
+  height: 60px;
+  background-color: rgb(173, 216, 230);
+  border-radius: 50%;
+  animation: objectMove 2s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 @keyframes objectMove {
-    0% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(-5px, -15px) rotate(-5deg);
-    }
-    50% {
-        transform: translate(0, -25px) rotate(0deg);
-    }
-    75% {
-        transform: translate(5px, -15px) rotate(5deg);
-    }
-    100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
+  0% {
+      transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+      transform: translate(-5px, -15px) rotate(-5deg);
+  }
+  50% {
+      transform: translate(0, -25px) rotate(0deg);
+  }
+  75% {
+      transform: translate(5px, -15px) rotate(5deg);
+  }
+  100% {
+      transform: translate(0, 0) rotate(0deg);
+  }
 }
-
 
 /* Third Page */
 .thirdpage {
-    width: 100vw;
-    background-color: rgb(173, 216, 230);
-    padding: 20px;
-    color: rgb(54, 69, 79);
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
+  width: 100vw;
+  background-color: rgb(173, 216, 230);
+  padding: 20px;
+  color: rgb(54, 69, 79);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
 }
-
 
 .thirdpage ul {
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
+
+/* Fish Animation */
 body {
-    margin: 0;
-    background: #111;
-    overflow: hidden;
-  }
-  
-  .spm-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .spm {
-    position: absolute;
-    top: 50%;
-    display: flex;
-    align-items: center;
-    animation: swim 6s ease-in-out infinite alternate;
-  }
-  
-  .head {
-    width: 30px;
-    height: 30px;
-    background:rgb(54, 69, 79);
-    border-radius: 50%;
-    z-index: 2;
-  }
-  
-  .tail {
-    width: 100px;
-    height: 6px;
-    background: linear-gradient(to left, rgb(65, 105, 225), transparent);
-    animation: wiggle 0.3s ease-in-out infinite;
-    transform-origin: right center;
-    z-index: 1;
-  }
-  
-  /* Horizontal movement with left-to-right and back motion */
-  @keyframes swim {
-    0% {
+  margin: 0;
+  background: #111;
+  overflow: hidden;
+}
+
+.spm-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.spm {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  animation: swim 6s ease-in-out infinite alternate;
+}
+
+.head {
+  width: 30px;
+  height: 30px;
+  background: rgb(54, 69, 79);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.tail {
+  width: 100px;
+  height: 6px;
+  background: linear-gradient(to left, rgb(65, 105, 225), transparent);
+  animation: wiggle 0.3s ease-in-out infinite;
+  transform-origin: right center;
+  z-index: 1;
+}
+
+@keyframes swim {
+  0% {
       left: -150px;
-      transform: scaleX(1); /* Facing right */
-    }
-    50% {
-      left: calc(100% - 150px); /* Moves to the right */
-      transform: scaleX(1); /* Keep facing right */
-    }
-    50.1% {
-      transform: scaleX(-1); /* Flip to face left */
-    }
-    100% {
-      left: -150px;
-      transform: scaleX(-1); /* Keep facing left */
-    }
+      transform: scaleX(1);
   }
-  
-  /* Tail wiggle effect */
-  @keyframes wiggle {
-    0% {
+  50% {
+      left: calc(100% - 150px);
+      transform: scaleX(1);
+  }
+  50.1% {
+      transform: scaleX(-1);
+  }
+  100% {
+      left: -150px;
+      transform: scaleX(-1);
+  }
+}
+
+@keyframes wiggle {
+  0% {
       transform: rotate(5deg);
-    }
-    50% {
+  }
+  50% {
       transform: rotate(-5deg);
-    }
-    100% {
-      transform: rotate(5deg);
-    }
   }
-  
-  
-  
+  100% {
+      transform: rotate(5deg);
+  }
+}
+
 /* Footer */
 footer {
-    background-color: rgb(65, 105, 225);
-    padding: 20px;
-    text-align: center;
-    margin: 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-    color: white;
+  background-color: rgb(65, 105, 225);
+  padding: 20px;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  color: white;
 }
 
 footer li {
-    list-style: none;
+  list-style: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer a:hover {
+  font-size: 18px; /* Make the link larger on hover */
+  color: rgb(173, 216, 230); /* Change the color on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header ul {
+      flex-direction: column;
+      gap: 5px;
+  }
+
+  .firstpage, .secondpage, .thirdpage {
+      flex-direction: column;
+  }
+
+  .secondpage {
+      height: auto;
+      padding: 10px;
+  }
+
+  .leftpart, .rightpart {
+      width: 100%;
+      height: auto;
+  }
+
+  .object {
+      width: 50px;
+      height: 50px;
+  }
+
+  .sidebarleft {
+      height: auto;
+  }
+
+  .sidebarleft h3 {
+      font-size: 28px;
+  }
+
+  .sidebarleft p {
+      font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  header ul li {
+      padding: 8px;
+  }
+
+  header a {
+      font-size: 14px;
+  }
+
+  .sidebarleft h3 {
+      font-size: 24px;
+  }
+
+  .sidebarleft p {
+      font-size: 14px;
+  }
+
+  .right-object {
+      width: 60px;
+      height: 60px;
+  }
 }
