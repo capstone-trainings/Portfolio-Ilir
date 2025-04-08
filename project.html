@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="project.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="project.css"/>
 </head>
 <body>
-    <header>
-        <ul>
-            <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About</a></li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
-    </header>
 
-    <div class="firstpage">
-        <div class="sidebarleft">
-            <h3 id="Home">Home</h3>
-            <p>Welcome to my portfolio! I'm Ilir Bajrami, a passionate web developer dedicated to crafting dynamic and user-friendly websites. I specialize in front-end development with a strong focus on building intuitive and visually appealing interfaces. Whether you're looking for a new project or just want to see what I’ve been working on, feel free to explore and connect with me!</p>
+  <!-- Header -->
+  <header>
+    <ul>
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </header>
 
-        </div>
+  <!-- First Page -->
+  <section class="firstpage" id="Home">
+    <div class="sidebarleft">
+      <h3>Home</h3>
+      <p>Welcome to my portfolio! I'm Ilir Bajrami, a passionate web developer dedicated to crafting dynamic and user-friendly websites...</p>
+    </div>
+    <div class="Firstpage-ID">
+        <div class="PHOTOSS"></div>
+        <img src="unnamed.jpg" alt="">
+        <p>ILIR BAJRAMI</p>
     </div>
 
-    <!-- Second Page -->
-    <div class="secondpage">
-        <div class="leftpart">
-            <div class="right-object">
-                <div class="object"></div>
-            </div>
-        </div>
+    </div>
+  </section>
 
-        <div class="rightpart">
-            <section id="portfolio">
-                <h2 id="About">About Me</h2>
-                <div class="portfolio-item">
-                    <p>I am passionate about continuously learning new web development technologies and improving my coding skills. My goal is to create websites that are not only functional but also provide an exceptional user experience. Feel free to explore my work, and if you're interested in collaborating, don't hesitate to reach out!</p>
+  <!-- Second Page -->
+  <section class="secondpage">
+    <div class="leftpart">
+      <div class="right-object">
+        <div class="object"></div>
+      </div>
+    </div>
+    <div class="rightpart">
+      <h2 id="About">About Me</h2>
+      <div class="portfolio-item">
+        <p>I am passionate about continuously learning new web development technologies and improving my coding skills...</p>
+        <a href="https://github.com/project1">View on GitHub</a>
+      </div>
+    </div>
+  </section>
 
-                    <a href="https://github.com/project1">View on GitHub</a>
-                </div>
-            </section>
-        </div>
+  <!-- Third Page -->
+  <section class="thirdpage">
+    <h3>Latest Blog Posts</h3>
+    <div class="boxes">
+      <div class="productbox">
+        <img src="create a pure css simple search bar step-by-step tutorial.jpg" alt="Search Bar Tutorial" />
+        <ul>
+          <li><a href="#">How to Build Your First Website</a></li>
+        </ul>
+      </div>
+      <div class="productbox">
+        <img src="glass-morphism-1024x699.webp" alt="Glass Morphism" />
+        <ul>
+          <li><a href="#">Mastering CSS Effects</a></li>
+        </ul>
+      </div>
     </div>
 
-    <div class="thirdpage">
-        <h3>Latest Blog Posts</h3>
-        <ul>
-            <li><a href="#">How to Build Your First Website</a></li>
-            <li><a href="#">CSS Tips and Tricks</a></li>
-            <li><a href="#">JavaScript Frameworks Comparison</a></li>
-        </ul>
-        <h3 id="Contact">Contact</h3>
-        <p>Id love to hear from you! Whether you have a question, feedback, or want to discuss a project, feel free to reach out.
-
-           
-            Or connect with me on social media:
-            
-            
-            Looking forward to hearing from you!
-            Look at the links below&#x1F60A;</p>
-            <div class="spm-container">
-                <div class="spm">
-                  <div class="tail"></div>
-                  <div class="head"></div>
-                </div>
-              </div>
+    <!-- Contact -->
+    <h3 id="Contact">Contact</h3>
+    
+    <p>I’d love to hear from you! Whether you have a question, feedback, or want to discuss a project...</p>
+    <form action="mailto:ilirbajrami777@outlook.com"  method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your message" rows="4" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    
+    
+    
+    <!-- Fish Animation -->
+    <div class="spm-container">
+      <div class="spm">
+        <div class="tail"></div>
+        <div class="head"></div>
+      </div>
     </div>
+  </section>
 
-    <footer>
-        <p>© 2025 ILIR BAJRAMI. All rights reserved.</p>
-        <p>Contact me: <a href="mailto:contact@example.com">contact@example.com</a></p>
-        <ul>
-            <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
-            <li><a href="https://github.com/yourprofile">GitHub</a></li>
-            <li><a href="https://twitter.com/yourprofile">Twitter</a></li>
-        </ul>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 ILIR BAJRAMI. All rights reserved.</p>
+    <p>Contact me: <a href="mailto:ilirbajrami777@outlook.com">ilirbajrami777@outlook.com</a></p>
+    <ul>
+      <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+      <li><a href="https://github.com/yourprofile">GitHub</a></li>
+      <li><a href="https://twitter.com/yourprofile">Twitter</a></li>
+    </ul>
+  </footer>
+
 </body>
 </html>
